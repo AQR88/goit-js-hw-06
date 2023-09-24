@@ -13,7 +13,7 @@ btn.addEventListener('click', colorChange);
 function colorChange(){
   const result = getRandomHexColor();
   spanTxt.textContent = result;
-  body.style.backgroundColor = getRandomHexColor();
+  body.style.backgroundColor = result;
   console.log(result);
 }
 
