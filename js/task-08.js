@@ -9,11 +9,15 @@ function acceptFoo(evt) {
     elements: { email, password },
   } = evt.currentTarget;
 
+  const data = {
+    email: email.value,
+    password: password.value,
+  };
+
   if (email.value && password.value !== "") {
-    console.log(`email: ${email.value}`, `\n\npassword:${password.value}`);
+    console.log(data);
   } else {
     alert(`Потрібно заповнити всі поля`);
   }
-  form.reset();
+  evt.currentTarget.reset();
 }
-

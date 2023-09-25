@@ -1,18 +1,19 @@
-const validation = document.querySelector('input[data-length="6"]');
 const input = document.querySelector('#validation-input');
-
-input.style.border = "3px solid ";
 
 input.addEventListener('blur', focusOff);
 
 function focusOff (evt){
+    
 const inputLength = input.value.length;
-const dataLength = Number(validation.dataset.length);
+
+const dataLength = Number(input.dataset.length);
+
+input.classList.remove("valid","invalid");
 
     if (inputLength === dataLength){
-        input.style.borderColor = "#4caf50";
+        input.classList.add("valid")
     }else if(inputLength !== dataLength){
-        input.style.borderColor = "#f44336";
+        input.classList.add("invalid");
     };
-    
+   
 };

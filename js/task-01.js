@@ -1,5 +1,3 @@
-const ulCategories = document.querySelectorAll("ul#categories");
-
 const liQuantity = document.querySelectorAll("li.item")
 
 console.log(`Number of categories:${liQuantity.length}`)

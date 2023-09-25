@@ -5,9 +5,9 @@ const span = document.querySelector('#name-output');
 input.addEventListener('input', inputText);
 
  function inputText (evt){
-if (input.value === ""){
+if (input.value.trim() === ""){
     span.textContent = "Anonimous"
-}else{
+}else{ 
     span.textContent = input.value;
 };
  }
